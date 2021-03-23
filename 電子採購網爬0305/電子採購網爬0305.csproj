@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30E5DA04-2796-4650-B720-01FDA2559155}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>電子採購網爬0305</RootNamespace>
+    <AssemblyName>電子採購網爬0305</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.31.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.31\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\202103050715140_create.cs" />
+    <Compile Include="Migrations\202103050715140_create.Designer.cs">
+      <DependentUpon>202103050715140_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103050717423_int.cs" />
+    <Compile Include="Migrations\202103050717423_int.Designer.cs">
+      <DependentUpon>202103050717423_int.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103051006515_column2.cs" />
+    <Compile Include="Migrations\202103051006515_column2.Designer.cs">
+      <DependentUpon>202103051006515_column2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103051018356_money.cs" />
+    <Compile Include="Migrations\202103051018356_money.Designer.cs">
+      <DependentUpon>202103051018356_money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103051453596_count.cs" />
+    <Compile Include="Migrations\202103051453596_count.Designer.cs">
+      <DependentUpon>202103051453596_count.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103051506569_datetime.cs" />
+    <Compile Include="Migrations\202103051506569_datetime.Designer.cs">
+      <DependentUpon>202103051506569_datetime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103051513232_datetime1.cs" />
+    <Compile Include="Migrations\202103051513232_datetime1.Designer.cs">
+      <DependentUpon>202103051513232_datetime1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103051521502_datetime2.cs" />
+    <Compile Include="Migrations\202103051521502_datetime2.Designer.cs">
+      <DependentUpon>202103051521502_datetime2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103051541153_decimal.cs" />
+    <Compile Include="Migrations\202103051541153_decimal.Designer.cs">
+      <DependentUpon>202103051541153_decimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="model\BidCase.cs" />
+    <Compile Include="model\Model1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202103050715140_create.resx">
+      <DependentUpon>202103050715140_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103050717423_int.resx">
+      <DependentUpon>202103050717423_int.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103051006515_column2.resx">
+      <DependentUpon>202103051006515_column2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103051018356_money.resx">
+      <DependentUpon>202103051018356_money.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103051453596_count.resx">
+      <DependentUpon>202103051453596_count.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103051506569_datetime.resx">
+      <DependentUpon>202103051506569_datetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103051513232_datetime1.resx">
+      <DependentUpon>202103051513232_datetime1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103051521502_datetime2.resx">
+      <DependentUpon>202103051521502_datetime2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103051541153_decimal.resx">
+      <DependentUpon>202103051541153_decimal.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
